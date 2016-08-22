@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var d1 = new Date();
+console.log(d1);
+
+
+var d2 = new Date(1993, 11, 25); //특정 날짜를 줄수 있음 월  0~11까지 
+console.log(d2);
+
+var d3 = new Date(3000000000000); //milliseconds
+console.log(d3);
+
+var days = ["일","월","화","수","목","금","토"];
+console.log(d1.getYear()+1900+"년");
+console.log(d1.getMonth()+1+"월");
+console.log(d1.getDate()+"일");
+console.log(d1.getHours()+":");
+console.log(d1.getMinutes()+":");
+console.log(d1.getSeconds());
+console.log(days[d1.getDay()]); //0이 일요일  6이 토요일 
+
+
+</script>
+</head>
+<body >
+</body>
+</html>

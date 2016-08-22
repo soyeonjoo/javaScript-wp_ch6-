@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var changeText = function(el){
+	console.log('clicked:'+el);
+	console.log(el.innerHTML);
+	el.innerHTML="clicked";
+	el.style.backgroundColor="#f00";
+	
+}
+</script>
+</head>
+<body >
+<!--
+<h1 onclick="this.innerHTML='Ooops!';">Click on this text!</h1>
+-->
+<h1 onclick="changeText(this);">Click on this text!</h1>
+
+</body>
+</html>

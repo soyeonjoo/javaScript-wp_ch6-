@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 객체의 리터럴 표기 */
+var employee = {}; /*  ★★★★★★★빈객체 만들기★★★ */
+var a = []; /* 배열만들기  */
+
+console.log(employee);
+employee.name= "주소연";
+employee.title="과장";
+ employee.info= function(){ /*  함수도 객체다 info라는 이름의 함수 객체가 생성됨  */
+	console.log(this.name+", "+ this.title+", ");
+ }
+ employee.info();
+</script>
+</head>
+<body>
+
+</body>
+</html>

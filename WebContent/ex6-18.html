@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+		
+		var displayDate = function() {
+			var buttonElement = this;
+			buttonElement.innerText = "<em>clicked</em>";//누르면 바뀜 ..  element안에서 는안됨 
+			console.log("clicked!");
+
+			var pElement = document.getElementById("demo");
+			var now = new Date();
+			pElement.innerHTML = "<em>" + (now.getYear() + 1900) + "년"
+					+ (now.getMonth() + 1) + "월" + (now.getDate()) + "일"
+					+ "</em>";
+
+		}
+		var clearDate = function() {
+			var buttonElement = this;
+			buttonElement.innerText = "Try it!";
+			var pElement = document.getElementById("demo");
+			pElement.innerHTML = "";
+
+		}
+		
+		window.onLoad = function() { // 각 함수에서 불러오기 
+			var buttonElement = document.getElementById("myBtn"); //  myBtn 아이디를 가진 element를 찾아줌
+			buttonElement.onclick = displayDate;
+			buttonElement.onmouseover= displayDate;
+			buttonElement.onmouseout = clearDate;
+	}
+	
+		window.onunload = function() {//ㅍㅔ이지 나갈때  ie에서만 지원
+			alert("onunload");
+	}
+</script>
+
+</head>
+
+<body onload="onLoad()">
+
+	<p>
+		버튼을 클릭하면 <em>displayDate()</em> 함수가 실행 됩니다.
+	</p>
+
+	<button id="myBtn">Try it</button>
+
+	<p id="demo">2016년08월 22일 09:36:12</p>
+
+</body>
+</html>

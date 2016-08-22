@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+
+//동적 타이핑
+number = 5;
+console.log(typeof number);
+
+number="Hello World";
+console.log(typeof number);
+
+
+used =false;
+console.log(typeof used);
+
+message = " Hello World";
+console.log(typeof message);
+
+number2 = new Number(10000); //함수인데 생성자 처럼쓰겠다는것.
+console.log(number2);
+
+
+
+/* null & undefined */
+ var myVar;
+ 
+ myVar2= null;
+ console.log(myVar+ ":" + myVar2);
+ console.log(myVar==myVar2);// true  null과 undefined는 같은것
+ console.log(myVar===myVar2); // false 왜냐하면 타입까지 비교하기 때문에 
+ 
+ 
+ /* == vs === */
+ var val = "10";
+ var val2 = 10;
+ 
+ console.log(val==val2);
+ console.log(val===val2);
+ 
+</script>
+</head>
+<body>
+</body>
+</html> 

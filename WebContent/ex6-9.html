@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//문자열 배열로 접근 
+var s = "Hello, I'm String";
+for(var i = 0; i<s.length; i++){
+	console.log(s[i]);
+}
+
+//+연산 스트링과 넘버가 만나면 스트링이됨 
+var s ="number";
+var v = "1";
+var v1 = 10;
+console.log( s+ v);
+console.log(s + v1);
+
+
+var v2 = "5";
+var v3 = 5;
+console.log(v2 + v3);
+console.log(v3 + v2);
+console.log(v3 + v1);
+
+var s1 = "Hello javaScript";
+var s2 = "Hello javaScript";
+console.log( s1== s2);
+console.log(s1 === s2);
+
+
+//indexOf 문자열 찾기 ! 어디에 나타나는지 ! 
+var str= "string1 string2 string3";
+console.log(str.indexOf("string2"));
+console.log(str.indexOf("string3432")); //없을때
+console.log(str.indexOf("str"));//중복될때 제일 앞에꺼 가져옴
+
+//substr
+var str1 = str.substr(8);
+console.log(str1);
+
+var str2 = str.substr(8, 10); //갯수만큼 가져오기 
+console.log(str2);
+
+
+//split
+var result = str.split(" ");
+console.log(result);
+
+
+//encoding escape, encodeURI, encodeURIComponent // a-z, A-Z, 0~9, *_+- 이런문자 빼고 다 엔코딩(한글, = ? /)     
+var str = "http://mysite.com/?stuff=\"안 대혁!&bar=";
+console.log(escape(str));
+console.log(encodeURI(str));
+console.log(encodeURIComponent(str));
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

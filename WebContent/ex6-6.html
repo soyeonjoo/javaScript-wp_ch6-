@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* Array 내장 객채 생성 */
+
+
+//생성자
+var a1 =new Array();
+console.log(a1);
+
+var a2 = new Array(10);
+a2[20] = "hello"; // 가 나오기때문에 10을 지정한것이 의미가 없음 
+console.log(a2);
+
+var a3 = new Array(	1,"hello", true, function(){
+		console.log("hello")
+	},{
+		name:"주소연", title:"과장"
+	}); 
+console.log(a3);
+a3[3]();// 함수도 객채기때문에 hello 가 출력될수있다.
+console.log(a3[4].name);
+
+
+var a4 = [];
+console.log(a4);
+
+var a5 = [1, "Hello", true, function (){console.log("world");}, 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

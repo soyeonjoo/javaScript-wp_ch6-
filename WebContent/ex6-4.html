@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var employee = function( name, title){ /* 클래스 생성자와 비슷~  */
+	this.name = name;
+	this.title = title;
+	this.info = function(){
+		console.log(this.name+":"+this.title);
+	}
+	
+}
+
+var e1 = new employee("둘리", "백수1");
+e1.info();
+
+var e2 = new employee("마이콜", "가수");
+e2.info();
+
+var e3 = new employee("도우넛", "백수2");
+e3.info();
+
+
+var e4 = new employee("또치", "백수3");
+e4.info();
+
+//================================
+function f(){ /* 함수 만들때  이것은 편법.. 이거말고 */ }
+
+var i = 10;
+var f = function(){ /* 요렇게 만들어 줄 것!!  */  }
+
+//================
+	
+	
+/* function 을 이용한 여러 객체 생성 방법(prototype 기반의객체 생성) */
+	var employee2 = function(name, title){
+		this.name = name;
+		this.title = title;
+}
+employee2.prototype.info = function(){
+	console.log(this.name+":"+this.title);
+}
+
+employee2.prototype.boss = "고길동";
+
+var e1 = new employee2("둘리", "백수1");
+e1.info();
+
+var e2 = new employee2("마이콜", "가수");
+e2.info();
+
+var e3 = new employee2("도우넛", "백수2");
+e3.info();
+
+
+var e4 = new employee2("또치", "백수3");
+e4.boss="희동이";/* 재정의  */
+e4.info = function (){ /*  오버라이드 */
+	console.log(this.boss+":"+this.name+":"+this.title)
+	
+}
+
+e4.info();
+e1.info();
+
+console.log(e1.boss);
+</script>
+</head>
+<body>
+
+</body>
+</html>
